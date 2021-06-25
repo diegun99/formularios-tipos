@@ -1,1 +1,17 @@
-<p>template-forms works!</p>
+<div class="container">
+    <form (ngSubmit)= "submit()" #forma="ngForm">
+        <label for="name"><b>Nombre</b></label>
+        <input
+                type="text"
+                #name="ngModel"
+                [(ngModel)] = "register.name"
+                placeholder="Introduzca su nombre de pila"
+                name="name"
+                minlength="5"
+                class="form-conrol"
+                required
+                [ngClass]="{'is-valid': !name.invalid, 'is-invalid':name.invalid}">
+
+    </form>
+
+</div>
