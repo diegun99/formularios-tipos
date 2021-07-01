@@ -32,6 +32,23 @@ export class TemplateFormsComponent implements OnInit {
   }
 
   submit(){
+    //datos recibidos
+    console.log("datos de inicio de sesión");
+    console.log(this.register.name);
+    console.log(this.register.email);
+    console.log(this.register.password);
+    console.log(this.register.repeatPass);
+
+    // controlar si el password y el password verificados son iguales
+    if (this.register.password!== this.register.repeatPass) {
+      // emitir alerta por no ser iguales y no deja enviar datos
+      console.log(" introducir contraseña iguales plz");
+      // echar mensaje alerta
+      return;
+      
+    }
+
+
 
   }
 
